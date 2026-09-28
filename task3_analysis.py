@@ -13,3 +13,9 @@ print("Median:", np.median(scores))
 print("Standard deviation:", np.std(scores))
 print("Highest score:", np.max(scores))
 print("Lowest score:", np.min(scores))
+category_counts = df["category"].value_counts()
+
+print("Category counts:")
+print(category_counts)
+
+print("Category with most stories:", category_counts.idxmax())
