@@ -268,7 +268,7 @@ df["num_comments"] = pd.to_numeric(df["num_comments"])
 
 print(df.dtypes)
 
-output_path = "data/cleaned_trends.csv"
+output_path = "data/trends_clean.csv"
 
 df.to_csv(output_path, index=False)
 
