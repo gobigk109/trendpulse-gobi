@@ -23,3 +23,11 @@ max_comments = df["num_comments"].idxmax()
 
 print("Story with most comments:", df.loc[max_comments, "title"])
 print("Comment count:", df.loc[max_comments, "num_comments"])
+df["score_per_comment"] = df["score"] / (df["num_comments"] + 1)
+
+df["title_length"] = df["title"].str.len()
+output_path = "data/trends_analysis.csv"
+
+df.to_csv(output_path, index=False)
+
+print("CSV saved:", output_path)
