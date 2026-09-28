@@ -19,3 +19,7 @@ print("Category counts:")
 print(category_counts)
 
 print("Category with most stories:", category_counts.idxmax())
+max_comments = df["num_comments"].idxmax()
+
+print("Story with most comments:", df.loc[max_comments, "title"])
+print("Comment count:", df.loc[max_comments, "num_comments"])
